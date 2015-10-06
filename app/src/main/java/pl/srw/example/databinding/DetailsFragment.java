@@ -33,8 +33,14 @@ public class DetailsFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        final DetailsBinding binding = DataBindingUtil.inflate(inflater, R.layout.fragment_details, container, false);
+        final DetailsBinding binding = DetailsBinding.inflate(inflater);
+        // option 2:
+//        final View view = inflater.inflate(R.layout.fragment_details, container, false);
+//        final DetailsBinding binding = DetailsBinding.bind(view);
+
+        // option 3:
+//        final DetailsBinding binding = DataBindingUtil.inflate(inflater, R.layout.fragment_details, container, false);
+
         binding.setDetails(new Details("He is very funny"));
         return binding.getRoot();
     }
