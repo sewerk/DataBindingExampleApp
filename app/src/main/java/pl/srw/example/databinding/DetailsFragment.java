@@ -21,9 +21,7 @@ public class DetailsFragment extends Fragment {
     }
 
     public static DetailsFragment newInstance() {
-
         Bundle args = new Bundle();
-
         DetailsFragment fragment = new DetailsFragment();
         fragment.setArguments(args);
         return fragment;
@@ -32,7 +30,14 @@ public class DetailsFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        final DetailsBinding binding = DetailsBinding.inflate(inflater);
+        final DetailsBinding binding = inflate(inflater);
+
+        binding.setDetails(new Details("He is very funny"));
+        binding.desc.setAllCaps(true);
+        return binding.getRoot();
+    }
+
+    private DetailsBinding inflate(LayoutInflater inflater) {
         // option 2:
 //        final View view = inflater.inflate(R.layout.fragment_details, container, false);
 //        final DetailsBinding binding = DetailsBinding.bind(view);
@@ -40,9 +45,7 @@ public class DetailsFragment extends Fragment {
         // option 3:
 //        final DetailsBinding binding = DataBindingUtil.inflate(inflater, R.layout.fragment_details, container, false);
 
-        binding.setDetails(new Details("He is very funny"));
-        binding.desc.setAllCaps(true);
-        return binding.getRoot();
+        return DetailsBinding.inflate(inflater);
     }
 
 

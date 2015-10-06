@@ -3,7 +3,9 @@ Example Android app demonstrating use of [data binding](https://developer.androi
 
 Structure:
 -MainActivity:
-  | binds User POJO in nested Activity layout
+  |   * binds User POJO in nested Activity layout
+  |   * observe changes on User POJO
   |
-  -DetailsActivity:
-  | binds Details POJO in Fragment layout
+  +->DetailsActivity:
+      * binds Details POJO in Fragment layout
+      * access view through binding
