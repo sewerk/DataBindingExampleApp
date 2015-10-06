@@ -27,5 +27,11 @@
             android:layout_height="wrap_content"
             android:text="@{user.lastName}"
             tools:text="Nowak"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="See details"
+            android:onClick="@{user.detailsButtonClicked}"/>
     </LinearLayout>
 </layout>
