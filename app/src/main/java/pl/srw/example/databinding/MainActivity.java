@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         UserBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
-        User user = new User("Test", "User");
+        User user = new User("John", "Smith");
         binding.setUser(user);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
