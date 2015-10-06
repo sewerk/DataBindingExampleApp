@@ -1,9 +1,8 @@
 package pl.srw.example.databinding;
 
 
-import android.databinding.DataBindingUtil;
-import android.os.Bundle;
 import android.app.Fragment;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -42,6 +41,7 @@ public class DetailsFragment extends Fragment {
 //        final DetailsBinding binding = DataBindingUtil.inflate(inflater, R.layout.fragment_details, container, false);
 
         binding.setDetails(new Details("He is very funny"));
+        binding.desc.setAllCaps(true);
         return binding.getRoot();
     }
 
